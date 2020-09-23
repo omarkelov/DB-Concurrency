@@ -2,15 +2,16 @@ package ru.nsu.fit.markelov;
 
 public class Main {
     public static void main(String[] args) {
-        printTenLines("Parent");
+        Thread.currentThread().setName("Parent");
 
-        new Thread(() -> printTenLines("Child"))
-            .start();
+        printLines();
+
+        new Thread(Main::printLines, "Child").start();
     }
 
-    public static void printTenLines(String threadName) {
+    private static void printLines() {
         for (int i = 1; i <= 10; i++) {
-            System.out.println(threadName + " thread: " + i);
+            System.out.println(Thread.currentThread().getName() + " thread: " + i);
         }
     }
 }
