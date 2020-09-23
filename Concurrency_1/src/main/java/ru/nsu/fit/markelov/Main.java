@@ -4,9 +4,9 @@ public class Main {
     public static void main(String[] args) {
         Thread.currentThread().setName("Parent");
 
-        printLines();
-
         new Thread(Main::printLines, "Child").start();
+
+        printLines();
     }
 
     private static void printLines() {
