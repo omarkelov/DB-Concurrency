@@ -3,7 +3,12 @@
 */.gradle/
 */.idea/
 */build/
+*/gradle/
 */out/
+
+# Files
+*/gradlew
+*/gradlew.bat
 
 *.kotlin_module
 
