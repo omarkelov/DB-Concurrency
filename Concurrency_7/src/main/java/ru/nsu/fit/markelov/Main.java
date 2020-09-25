@@ -14,6 +14,6 @@ public class Main {
                 threadsCount + " threads will be used.");
         }
 
-        new Founder(new Company(threadsCount, 8)).start();
+        new Founder(new Company(threadsCount, Integer.MAX_VALUE / 16)).start();
     }
 }

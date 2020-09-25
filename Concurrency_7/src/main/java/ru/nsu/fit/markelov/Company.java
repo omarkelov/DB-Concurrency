@@ -20,8 +20,7 @@ public final class Company {
             .reduce(Double::sum)
             .orElse(Double.POSITIVE_INFINITY);
 
-        System.out.println(result);
-        System.out.println("Dif is: " + Math.abs(result - Math.PI / 4));
+        System.out.println(result + " (" + (result - Math.PI / 4) + ")");
     }
 
     public int getDepartmentsCount() {

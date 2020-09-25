@@ -15,7 +15,7 @@ public class Department {
 
     public void performCalculations() {
         for (int i = 0; i < iterations; i++) {
-            int n = i * threadsCount + threadId; // number of the element in the Leibniz formula
+            long n = i * threadsCount + threadId; // number of the element in the Leibniz formula
             double nthElementValue = 1d / (2 * n + 1);
 
             if (n % 2 == 0) {
