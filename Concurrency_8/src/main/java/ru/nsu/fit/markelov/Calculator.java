@@ -16,7 +16,7 @@ public class Calculator {
         this.threadsCount = threadsCount;
 
         thread = new Thread(() -> {
-            calculate(Integer.MAX_VALUE / 8);
+            calculate(Integer.MAX_VALUE);
             calculate(maxIteration);
 
             try {
@@ -33,7 +33,7 @@ public class Calculator {
                 return;
             }
 
-            long n = iteration * threadsCount + id; // number of the element in the Leibniz formula
+            long n = ((long) iteration) * threadsCount + id; // number of the element in the Leibniz formula
             double nthElementValue = 1d / (2 * n + 1);
 
             if (n % 2 == 0) {
