@@ -27,6 +27,7 @@ public final class Founder {
             .reduce(Double::sum)
             .orElse(Double.POSITIVE_INFINITY);
 
+        System.out.println();
         System.out.println(result + " (" + (result - Math.PI / 4) + ")");
     }
 
